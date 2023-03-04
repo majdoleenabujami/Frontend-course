@@ -857,5 +857,43 @@ console.log(Car2);
 console.log(Car1 instanceof RentCar);//true
 
 console.log(Car2.instructor===User);//false
+
+//#150 Deal with properties qnd methods
+
+
+class User{
+    
+    constructor(id,userName,salary){
+//propertei
+  this.i=id;
+  this.n=userName || 'unknown';
+  this.s=salary < 1000 ? salary+500 : salary;
+  this.msg=function(){
+  return ("helle " + this.n +" "+ "your salary is:" + this.s );
+  }
+}
+//methods
+   checkName(){
+     return (this.n ==='unknown')? 'please add your name':'thanks for your time🙏';
+     }
+   
+
+}
+
+let userOne=new User(100,'',3000);//unknown,3000
+console.log(userOne);
+console.log(userOne.msg());
+console.log(userOne.checkName());
+console.log(userOne.msg);//native code
+console.log(userOne.checkName);//native code لأنو ما حطينا القوسين لما استدعينا الفانكشن
+
+
+console.log("♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤")
+
+let userTwo=new User(101,'Maiood',600);//Majood,1100
+console.log(userTwo);
+console.log(userTwo.msg());
+console.log(userTwo.checkName());
 */
+//#151 update properties and builtin constructor
 
